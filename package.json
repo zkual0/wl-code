@@ -1,0 +1,25 @@
+{
+  "name": "wl-code",
+  "version": "1.0.0",
+  "description": "code challenge v1.0",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome":            "testcafe chrome                            ./tests/test-group1 -s takeOnFails=true",
+    "test:chrome:5":          "testcafe -c 5 chrome                       ./tests/test-group1 -s takeOnFails=true --reporter list",
+    "test:chrome:headless":   "testcafe chrome:headless                   ./tests/test-group1 -s takeOnFails=true",
+    "test:chrome:headless:5": "testcafe -c 5 chrome:headless              ./tests/test-group1 -s takeOnFails=true --reporter list",
+    "test:chrome:mobile":     "testcafe chrome:emulation:device=iphone X  ./tests/test-group1 -s takeOnFails=true",
+    "test:safari":            "testcafe safari                            ./tests/test-group1 -s takeOnFails=true",
+    "test:firefox":           "testcafe firefox                           ./tests/test-group1 -s takeOnFails=true",
+    "test:multiple":          "testcafe safari,chrome,firefox             ./tests/test-group1 -s takeOnFails=true",
+    "prettier-all":           "npx prettier --write ."
+  },
+  "author": "FantasticMrJFoxx",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.3.0",
+    "testcafe": "^1.14.2",
+    "testcafe-reporter-list": "^2.1.0",
+    "xpath-to-css": "^1.0.5"
+  }
+}
