@@ -37,11 +37,15 @@ Suggested examples:
 
 ```sh
 # Notes:
-# looks like testcafe doesn't support chaining methods yet                                
-# reference: https://testcafe-discuss.devexpress.com/t/how-to-chain-pagemodel-methods/313
+# * This project autoatically takes screenshots when a failures
+#
+# * Reporting with Lists was implemented to "test:chrome:5" and "test:chrome:headless:5" as PoC only
+#   it can be extended to remaining execution commands
+#
+# * Looks like testcafe doesn't support chaining methods yet                                
+#   reference: https://testcafe-discuss.devexpress.com/t/how-to-chain-pagemodel-methods/313
 #           https://github.com/DevExpress/testcafe/issues/1535
 #
-#
-# support for xpath selectors might be satisfied by following this approach:
-# https://github.com/DevExpress/testcafe-examples/tree/master/examples/use-xpath-selectors
+# * Support for xpath selectors might be satisfied by following this approach:
+#   https://github.com/DevExpress/testcafe-examples/tree/master/examples/use-xpath-selectors
 ```
