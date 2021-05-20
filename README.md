@@ -1,7 +1,7 @@
 # wl-code
 
 ## Steps to make the project work
-- Make sure you have the right node version already installed in your host
+#### Make sure you have the right node version already installed in your host
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
