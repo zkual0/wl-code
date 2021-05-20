@@ -1,0 +1,12 @@
+{
+    "standard_account": {
+        "url": "https://www.saucedemo.com/",
+        "username": "standard_user",
+        "password": "secret_sauce"
+    }, 
+    "invalid_account": {
+        "url": "https://www.saucedemo.com/",
+        "username": "invalid-user",
+        "password": "invalid-password"
+    }
+ }

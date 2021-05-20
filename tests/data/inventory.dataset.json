@@ -1,0 +1,34 @@
+{
+    "inventory":{
+        "landing_url": "https://www.saucedemo.com/",
+        "test01": {
+            "test_name": "it sorts products by Price (Low to High)",
+            "available_products": [],
+            "expected_sorted_products": [
+                "Sauce Labs Onesie",
+                "Sauce Labs Bike Light",
+                "Sauce Labs Bolt T-Shirt",
+                "Test.allTheThings() T-Shirt (Red)",
+                "Sauce Labs Backpack",
+                "Sauce Labs Fleece Jacket"
+            ]
+        },
+        "test02": {
+            "test_name": "shopping cart reflects specific products added by the user",
+            "expected_products": [
+                "Sauce Labs Onesie",
+                "Sauce Labs Bike Light",
+                "Sauce Labs Bolt T-Shirt"
+            ]
+        },
+        "test03": {
+            "test_name": "full purchase workflow works correctly",
+            "expected_products": [
+                "Sauce Labs Onesie",
+                "Sauce Labs Bike Light",
+                "Sauce Labs Bolt T-Shirt"
+            ],
+            "completeHeaderTitle": "THANK YOU FOR YOUR ORDER"
+        }
+    }
+ }
