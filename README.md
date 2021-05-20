@@ -1,7 +1,7 @@
 # wl-code
 
 ## Steps to make the project work
-- Make sure you have the right npm already installed in your host
+- Make sure you have the right node version already installed in your host
 ```sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
@@ -35,12 +35,13 @@ Suggested examples:
 - npm run test:chrome:headless
 - npm run test:multiple
 
-
-notes:
-// looks like testcafe doesn't support chaining methods yet                                
-// reference: https://testcafe-discuss.devexpress.com/t/how-to-chain-pagemodel-methods/313
-//            https://github.com/DevExpress/testcafe/issues/1535
-//
-//
-// support for xpath selectors might be satisfied by following this approach:
-//   https://github.com/DevExpress/testcafe-examples/tree/master/examples/use-xpath-selectors
+```sh
+# Notes:
+# looks like testcafe doesn't support chaining methods yet                                
+# reference: https://testcafe-discuss.devexpress.com/t/how-to-chain-pagemodel-methods/313
+#           https://github.com/DevExpress/testcafe/issues/1535
+#
+#
+# support for xpath selectors might be satisfied by following this approach:
+# https://github.com/DevExpress/testcafe-examples/tree/master/examples/use-xpath-selectors
+```
