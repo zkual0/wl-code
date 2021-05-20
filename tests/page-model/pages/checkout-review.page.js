@@ -10,6 +10,8 @@ class CheckoutReviewPage extends TopNavigationBar {
         this.cancelButton    = Selector('#cancel');
     }
 
+    // returns: an array of strings representing all the 
+    //          actually listed products chosen by the user
     async getProductsList(){
         let lst = [];
         let products = this.productsNames;

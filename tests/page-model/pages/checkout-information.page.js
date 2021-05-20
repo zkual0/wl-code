@@ -12,10 +12,15 @@ class CheckoutInformationPage extends TopNavigationBar {
         this.cancelButton    = Selector('#cancel');
     }
 
-    async fillCheckoutForm(firstname, lastname, postalCode){
+    // fills the checkout form
+    // params:
+    //      - firstname(string): user first name (optional)
+    //      - lastname(string): user last name (optional)
+    //      - postalCode(string): user postal code (optional)
+    async fillCheckoutForm(firstName, lastName, postalCode){
         await t
-            .typeText(this.firstNameField, firstname, {paste: true})
-            .typeText(this.lastNameField, lastname, {paste: true})
+            .typeText(this.firstNameField, firstName, {paste: true})
+            .typeText(this.lastNameField, lastName, {paste: true})
             .typeText(this.postalCodeField, postalCode, {paste: true});
     }
 

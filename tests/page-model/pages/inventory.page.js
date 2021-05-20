@@ -1,5 +1,5 @@
-import { Selector, t } from "testcafe";
-import TopNavigationBar  from "../components/top-navigation-bar.page";
+import { Selector, t }  from "testcafe";
+import TopNavigationBar from "../components/top-navigation-bar.page";
 
 class AvailableProducts{
     constructor(){
@@ -15,20 +15,19 @@ class AvailableProducts{
 class InventoryPage extends TopNavigationBar {
     constructor(){
         super();
-        this.titleBar               = Selector('.title').withExactText('PRODUCTS');
-        this.productsSortDropdown   = Selector('select.product_sort_container');
-        this.optionAtoZ             = Selector('option[value="az"]');
-        this.optionZtoA             = Selector('option[value="za"]');
-        this.optionLowToHigh        = Selector('option[value="lohi"]');
-        this.optionHighToLow        = Selector('option[value="hilo"]'); 
-        this.inventoryItems         = Selector('.inventory_item_name');
-        // JFoxx README
-        // xPaths like these ones below thrown an error when using xPathToCss 
-        // so I decided to take a different approach instead. (note: both passed when using Chrome Console)
-        //'//div[contains(text(),"Sauce Labs Onesie")]/../../../*/button'; 
-        //'//div[text()="Sauce Labs Onesie"]/../../../*/button';
-        this.availableProducts = new AvailableProducts();
-        this.addToCartButton = (value) => { return Selector('div.inventory_item_description').withText(value).find('button'); };    
+        this.availableProducts    = new AvailableProducts(); 
+        this.titleBar             = Selector('.title').withExactText('PRODUCTS');
+        this.productsSortDropdown = Selector('select.product_sort_container');
+        this.optionAtoZ           = Selector('option[value="az"]');
+        this.optionZtoA           = Selector('option[value="za"]');
+        this.optionLowToHigh      = Selector('option[value="lohi"]');
+        this.optionHighToLow      = Selector('option[value="hilo"]'); 
+        this.inventoryItems       = Selector('.inventory_item_name');
+
+        // gets a button Selector for a specific product by using a string
+        // note: xpaths using text() or contains() where not supported by xPathToCss 
+        //       so ".withText" method was used instead
+        this.addToCartButton      = (value) => { return Selector('div.inventory_item_description').withText(value).find('button'); };    
     }
 
     async sortProductsByNameAtoZ(){
@@ -51,6 +50,8 @@ class InventoryPage extends TopNavigationBar {
                .click(this.optionHighToLow);
     }
 
+    // returns: an array of strings representing all the 
+    //          actually listed products in the inventory
     async getListedProducts(){
         let names = [];
         let items = this.inventoryItems;
@@ -61,7 +62,12 @@ class InventoryPage extends TopNavigationBar {
         return names;
     }
 
+    // Adds one or more products into the shopping cart
+    // - param products: can be a string or an array of 
+    //                   strings of currently listed products
+    // - returns: null
     async addProducts(products){
+
         if (!Array.isArray(products)){
             products = [products];
         }

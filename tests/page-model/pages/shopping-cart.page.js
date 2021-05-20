@@ -1,5 +1,5 @@
-import { Selector, t } from "testcafe";
-import TopNavigationBar  from "../components/top-navigation-bar.page";
+import { Selector, t }  from "testcafe";
+import TopNavigationBar from "../components/top-navigation-bar.page";
 
 class ShoppingCartPage extends TopNavigationBar {
     constructor(){
@@ -11,6 +11,8 @@ class ShoppingCartPage extends TopNavigationBar {
     }
 
     async getProductsList(){
+        // returns: an array of strings representing all the 
+        //          listed products in the cart
         let lst = [];
         let products = this.productsNames;
         let count = await products.count; 

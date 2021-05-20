@@ -1,4 +1,4 @@
-import {Selector, t} from 'testcafe';
+import {t} from 'testcafe';
 
 class BasePage{
     async waitFor(milliseconds, debug=false) {

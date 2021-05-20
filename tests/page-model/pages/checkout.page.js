@@ -6,7 +6,14 @@ import TopNavigationBar         from "../components/top-navigation-bar.page";
 
 class CheckoutPage{
 
-    async checkout(expected_products=[], firstName='Jimmy', lastName='Foxx', postalCode='90210'){
+    // it take cares of the tedious further steps of completing the checkout process by filling
+    // mandatory forms and validating chosen products by the user were added into the cart only
+    // params:
+    //    - expected_products: array of strings representing the names of required products
+    //    - firstName: user first name (optional)
+    //    - lastName: user last name (optional)
+    //    - postalCode: user postal code (optional)
+    async checkout(expected_products=[], firstName='FantasticMrJ', lastName='Foxx', postalCode='90210'){
         const topNavigationBar        = new TopNavigationBar();
         const shoppingCartPage        = new ShoppingCartPage();
         const checkoutInformationPage = new CheckoutInformationPage();  
