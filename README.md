@@ -37,7 +37,7 @@ Suggested examples:
 
 ```sh
 # Notes:
-# * This project autoatically takes screenshots when a failures
+# * This project automatically takes screenshots when failures
 #
 # * Reporting with Lists was implemented to "test:chrome:5" and "test:chrome:headless:5" as PoC only
 #   it can be extended to remaining execution commands
